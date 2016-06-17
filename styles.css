@@ -1,0 +1,96 @@
+body{
+    background-image: url('http://res.cloudinary.com/mahmud/image/upload/v1466126237/kl_dtno5n.jpg');
+    background-size: 1400px 800px;
+    background-repeat: no-repeat;
+}
+
+#app{
+    background-color: #4abdac;
+    opacity: 0.96;
+    width: 100%;
+    height: 800px;
+}
+.row{
+    margin-top: 5%;
+}
+.container{
+    margin-left: 5%;
+}
+#board{
+    background-color: #DFDCE3;  
+    width: 375px;
+    min-height: 300px;
+    height: auto;
+    margin-left: 10px;
+    padding: 20px;
+}
+label{
+    margin-left: 0px;
+    margin-top: 5px;
+}
+#search{
+    float: right;
+}
+h1{
+    font-family: 'Variane Script';
+    font-size: 75px;
+    margin-top: 20px;
+    color: white;
+}
+h3{
+    text-align: center;
+    color: darkslategray;
+}
+.glyphicon-plus-sign{
+    color: #fc4a1a;
+    border: none;
+    font-size: 40px;
+}
+.glyphicon-circle-arrow-right{
+    color: mediumseagreen;
+    font-size: 20px;
+}
+.blue{
+    color: cornflowerblue;
+    font-size: 20px;
+}
+
+.glyphicon-remove-sign{
+    color: #fc4a1a;
+    font-size: 20px;
+}
+.d{
+    color: #f7b733;
+    font-size: 20px;
+}
+.btn-sm{
+   float: right;
+}
+#todo{
+    font-size: 20px;
+    color: lightslategray;
+    text-align: center;
+    padding: 10px;
+}
+.todo{
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+hr{
+    color: #f7b733;
+}
+.btn-default btn-sm{
+    border: 0;
+}
+.test{
+    border: 0;
+    background: white;
+}
+li{
+    list-style-type: none;
+    background-color: white;
+    border: 0.1em solid lightgray;
+    box-shadow: 10px 10px 10px #888888;
+    height: 50px;
+}

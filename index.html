@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trello Clone</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>Harmonize</h1><hr>
+            <div class="row">
+                <div class="col-sm-6" id="board">{{todoCount}}
+                    <to-do :todos="todos"></to-do>
+                </div>
+                <div class="col-sm-6" id="board">
+                    <in-progress :progress="progress"></in-progress>
+                </div>
+                <div class="col-sm-6" id="board">
+                    <done :done="finished"></done>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- start: to-do component -->
+    <template id="to-do">
+        <h3>Todos</h3><hr>
+        <ol>
+            <li v-for="todo in todos">
+                <div class="todo">
+                    <button @click="remove($index)" class="test">
+                        <span class="glyphicon glyphicon-remove-sign"></span>
+                    </button>
+                    <span id="todo">{{todo}}</span>
+                    <button   @click="inProgress(todo, $index)" class="test">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                    </button>
+            </li>
+            </div>
+        </ol>
+        <div id="search">
+            <input 
+                type="text"
+                class="form-control"
+                v-model="newTodo"
+                placeholder="Enter new task..."><br>
+           
+            <button :disabled="newTodo.length===0" @click="addTodo" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+            </button>
+     
+        </div>
+    </template>
+<!-- end: to-do component -->
+
+<!-- start: in-progress component -->
+    <template id="in-progress">
+        <h3>In progress</h3><hr>
+        <ol>
+            <li v-for="todo in progress">
+                <div class="todo">
+                    <span id="todo">{{todo}}</span>
+                    <button  @click="done(todo, $index)" class="test">
+                        <span class="glyphicon glyphicon-circle-arrow-right blue"></span>
+                    </button>
+            </li>
+            </div>
+        </ol>
+    </template>
+<!-- end: in-progress component -->
+
+<!-- start: done component -->
+    <template id="done">
+        <h3>Done</h3><hr>
+        <ol>
+            <li v-for="todo in done">
+                <div class="todo">
+                <span id="todo">{{todo}}</span>
+                <button @click="remove($index)" class="test">
+                    <span class="glyphicon glyphicon-remove-sign d"></span>
+                </button>
+            </li>
+                </div>
+        </ol>
+    </template>
+<!-- end: done component -->
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

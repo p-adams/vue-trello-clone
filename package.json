@@ -1,0 +1,16 @@
+{
+  "name": "trello-clone",
+  "version": "1.0.0",
+  "description": "\"Vue.js trello clone\"",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "vue": "^1.0.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Paul Adams\"",
+  "license": "ISC"
+}
